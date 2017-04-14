@@ -16,5 +16,9 @@ Docker 101 Demo
 **Docker UI:**
 
 * Many choices
-      + Portainer
-         + [https://hub.docker.com/r/portainer/portainer](https://hub.docker.com/r/portainer/portainer)
+
+      * Portainer
+
+        * [https://hub.docker.com/r/portainer/portainer](https://hub.docker.com/r/portainer/portainer)
+
+        * ./runPortainer.sh to start UI on port 9000

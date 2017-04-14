@@ -33,4 +33,5 @@ volumes:
 
 
 **Compose UI**
-[https://hub.docker.com/r/francescou/docker-compose-ui/](https://hub.docker.com/r/francescou/docker-compose-ui)
+
+    * [https://hub.docker.com/r/francescou/docker-compose-ui/](https://hub.docker.com/r/francescou/docker-compose-ui)
