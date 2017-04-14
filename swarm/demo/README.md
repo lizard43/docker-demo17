@@ -59,17 +59,17 @@
 * At this point, we have 5 nodes but nothing running
 
 
-on manager
+* on manager
 
-docker service create --name hello1 --publish 3000:3000 --replicas=2 alexellis2/arm-alpinehello
-curl -4 localhost:3000
-docker service rm hello1
-
+docker service create --name hello --replicas=2 orax/alpine-armhf ping localhost
+docker service ls
 docker service scale hello=5
+docker service scale hello=5
+docker service rm hello1
 
 --constraint
 
-You can limit the set of nodes where a task can be scheduled by defining constraint expressions. 
+* You can limit the set of nodes where a task can be scheduled by defining constraint expressions. 
 Multiple constraints find nodes that satisfy every expression (AND match). 
 Constraints can match node or Docker Engine labels as follows:
 
@@ -80,5 +80,10 @@ node role: manager	   Nose role                  node.role == manager
 node.labels	            user defined node labels   node.labels.security == high
 engine.labels	         Docker Engine's labels	   engine.labels.operatingsystem == ubuntu 14.04
 
-docker node update --label-add ostype=pi pi1
-docker service create --name selenfox --constraint 'node.labels.ostype == pi' blah/foo:latest
+docker service create --name hello --replicas=2 --constraint node.role!=manager orax/alpine-armhf ping localhost
+docker service ls
+docker service scale hello=3
+docker service scale hello=5
+docker service rm hello1
+docker service ls
+
