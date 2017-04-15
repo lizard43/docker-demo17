@@ -17,8 +17,13 @@ Docker 101 Demo
 
 * Many choices
 
-      * Portainer
+   * Docker UI
+      * [https://github.com/kevana/ui-for-docker](https://github.com/kevana/ui-for-docker)
+      * ./runDockerUI.sh to start UI on port 80
+      * Point browser to http://localhost
 
-        * [https://hub.docker.com/r/portainer/portainer](https://hub.docker.com/r/portainer/portainer)
-
-        * ./runPortainer.sh to start UI on port 9000
+   * Portainer
+      * [https://hub.docker.com/r/portainer/portainer](https://hub.docker.com/r/portainer/portainer)
+      * ./runPortainer.sh to start UI on port 9000
+      * Point browser to http://localhost:9000
+        

@@ -176,7 +176,7 @@ pause
 # since the orax/alpine-armhf image is for the ARM processor, it won't run on x86
 # so now let's start the same service but constrain it only to the worker nodes
 # now create a service on the manager node and it will be deployed to the swarm 
-COMMAND='docker service create --name hello-arm --constraint node.role!=manager --replicas=20 orax/alpine-armhf ping localhost'
+COMMAND='docker service create --name hello-arm --constraint node.role!=manager --replicas=10 orax/alpine-armhf ping localhost'
 clear
 echo
 echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
@@ -193,8 +193,91 @@ ${COMMAND}
 echo
 pause
 
+#
+# Now show fault recovery by unplugging a node.
+# The services that were on the dead node will restart on other nodes
+
+# show how many are running/requested
+COMMAND='docker service ls'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+#
+# Plug back in node
+#
+
 # remove service
 COMMAND='docker service rm hello-arm'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+#
+# Now lets show load balancing via the docker mesh network.
+# The Pi's are running a WS2812 program called sparkleNative.py (see that folder for details).
+# Start sparkle on the Pi's and then run curl against the manager to see the load balancing
+COMMAND='docker service create --name sparkle --constraint node.role==worker --replicas=4 -p 4000:4000 roadster/sparkles'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# make it sparkle
+COMMAND='curl http://dnuc:4000/sparkle'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# make it sparkle
+COMMAND='curl http://dnuc:4000/sparkle'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# make it sparkle
+COMMAND='curl http://dnuc:4000/sparkle'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# make it sparkle
+COMMAND='curl http://dnuc:4000/sparkle'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# make it sparkle
+COMMAND='curl http://dnuc:4000/sparkle'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# remove service
+COMMAND='docker service rm sparkle'
 clear
 echo
 echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
