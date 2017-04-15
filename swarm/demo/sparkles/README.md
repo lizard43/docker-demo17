@@ -21,7 +21,8 @@
 
 * So ... This is a hack of a workaround.
    * The dockerfile in this folder will create an image that can be run as a stand-alone container
-      * Look at runSparkles.sh
+      * Run the buildSparkles.sh ON a Pi. If you build on an x86 machine, it will not run on a Pi
+      * Look at runSparkles.sh to see how to run as a container
 
    * The hack is that we also will install the unicorn and pyhton scripts locally that exposes the sparkles interfaces. And then run the same docker image as a docker swarm service but use a different set of interfaces.
       * http://localhost:3000/sparkle

@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# access via http://<host>:3000/sparklesnative
-# access via http://<host>:3000/calcnative
-# access via http://<host>:3000/firenative
+# access via http://<host>:4000/sparkles
+# access via http://<host>:4000/online
+# access via http://<host>:4000/calc
+# access via http://<host>:4000/fire
 #
-docker run -it --rm --name rest --privileged  -p 3000:3000 roadster/sparkles
+docker run -it --rm --name sparkles --privileged  -p 4000:4000 roadster/sparkles
