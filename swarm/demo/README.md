@@ -1,5 +1,19 @@
 # A general Swarm demo to show basic connectivity and features of Docker swarm
 
+* Start the Swarm Visualizer on the node that will be the manager
+
+	https://github.com/ManoMarks/docker-swarm-visualizer
+
+	* Run:
+		* docker run -dt --name swarm-viz --rm -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock  manomarks/visualizer
+		* OR the sh script
+			* ./runSwarmVisualizer.sh
+		
+	* This will start the manomarks swarm visualizer on port 8080 of the manager node
+
+	![Swarm Vizualizer](../../images/swarm-viz.png)
+
+
 * On the server/VM/node that will be the manager:
 
 	* docker swarm init
@@ -17,20 +31,7 @@
 
 	![Swarm Init](../../images/swarm-init.png)
 
-* Start the Swarm Visualizer on the manager node
-
-	https://github.com/ManoMarks/docker-swarm-visualizer
-
-	* Run:
-		* docker run -dt --rm -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock  manomarks/visualizer
-		* OR the sh script
-			* ./runSwarmVisualizer.sh
-		
-	* This will start the manomarks swarm visualizer on port 8080 of the manager node
-
-	![Swarm Vizualizer](../../images/swarm-viz.png)
-
-* On other nodes that you want to be part of the swarm, put the 'docker swarm join' command that you got above from the 'docker swarm init' command:
+* On other nodes that you want to be part of the swarm, enter the 'docker swarm join' command that you got above from the 'docker swarm init' command:
 
 	docker swarm join \
     --token SWMTKN-1-01xnj03daza6brr6cc9yp95jqbydlxfa2sk3j9wwpua33bgee8-8jyvgeqgjvst2hk03qxodb5f4 \
@@ -58,32 +59,21 @@
 
 * At this point, we have 5 nodes but nothing running
 
+* On manager
+   * docker service create --name hello --replicas=2 orax/alpine-armhf ping localhost
+   * docker service ls
+   * docker service scale hello=5
+   * docker service ls
+   * docker service scale hello=20
+   * docker service ls
+   * docker service rm hello
+   * docker service ls
 
-* on manager
+* Since the orax/alpine-armhf image is for the ARM processor, it won't run on x86 # so now let's start the same service but constrain it only to the worker nodes now create a service on the manager node and it will be deployed to the swarm
+   * docker service create --name hello-arm --constraint node.role!=manager --replicas=20 orax/alpine-armhf ping localhost
 
-docker service create --name hello --replicas=2 orax/alpine-armhf ping localhost
-docker service ls
-docker service scale hello=5
-docker service scale hello=5
-docker service rm hello1
+* There's many constraint options, learn about them here:
+   https://docs.docker.com/engine/reference/commandline/service_create/#specify-service-constraints---constraint
 
---constraint
-
-* You can limit the set of nodes where a task can be scheduled by defining constraint expressions. 
-Multiple constraints find nodes that satisfy every expression (AND match). 
-Constraints can match node or Docker Engine labels as follows:
-
-node attribute	         matches	                  example
-node.id	               Node ID	                  node.id == 2ivku8v2gvtg4
-node.hostname	         Node hostname	            node.hostname != node-2
-node role: manager	   Nose role                  node.role == manager
-node.labels	            user defined node labels   node.labels.security == high
-engine.labels	         Docker Engine's labels	   engine.labels.operatingsystem == ubuntu 14.04
-
-docker service create --name hello --replicas=2 --constraint node.role!=manager orax/alpine-armhf ping localhost
-docker service ls
-docker service scale hello=3
-docker service scale hello=5
-docker service rm hello1
-docker service ls
+	![Node Constraint](../../images/constraint.png)
 
