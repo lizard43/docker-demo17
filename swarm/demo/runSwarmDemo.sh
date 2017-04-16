@@ -4,7 +4,7 @@
 # Demo file to show interacting with swarm by show status, creating a service,
 # scaling it and then stopping service
 #
-# This script is intensed to be used as part of the demo.
+# This script is intended to be used as part of the demo.
 # It echos a command line as if it was being typed live and then executes the line.
 # It then pauses and waits for a keypress before continuing.
 #

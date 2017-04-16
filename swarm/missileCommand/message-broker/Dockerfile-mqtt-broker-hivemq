@@ -1,0 +1,9 @@
+FROM anapsix/alpine-java:latest
+MAINTAINER roadster
+
+ADD hivemq-3.2.2 hivemq-3.2.2
+
+EXPOSE 1883
+EXPOSE 8000
+
+CMD ["./hivemq-3.2.2/bin/run.sh"]

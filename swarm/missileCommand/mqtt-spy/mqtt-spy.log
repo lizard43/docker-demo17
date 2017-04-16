@@ -1,0 +1,546 @@
+2017-02-18 20:55:54,561 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-02-18 20:55:54,578 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-02-18 20:56:01,498 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1:1883 -> tcp://127.0.0.1:1883)
+2017-02-18 20:56:01,989 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in /home/d/mqtt-spy/
+2017-02-18 20:56:02,064 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2017-02-18 20:56:02,064 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2017-02-18 20:56:02,565 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1:1883]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2017-02-18 20:56:02,580 WARN  [MQTT Con: mqtt-spy            ] [MqttConnectionResultHandler   ]  - Connecting to mqtt-spy@localhost failed
+Unable to connect to server (32103) - java.net.ConnectException: Connection refused (Connection refused)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:79)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	... 2 more
+2017-02-18 20:56:10,599 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1:1883]
+2017-02-18 20:59:41,249 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-02-18 20:59:41,257 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-02-18 20:59:42,917 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1:1883 -> tcp://127.0.0.1:1883)
+2017-02-18 20:59:43,379 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in /home/d/mqtt-spy/
+2017-02-18 20:59:43,484 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2017-02-18 20:59:43,484 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2017-02-18 20:59:43,985 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1:1883]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2017-02-18 20:59:44,071 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2017-02-18 20:59:44,426 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2017-02-18 20:59:50,251 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1:1883]
+2017-02-18 20:59:50,271 INFO  [MQTT Disc: mqtt-spy           ] [MqttDisconnectionResultHandler]  - mqtt-spy@localhost disconnected
+2017-02-18 21:05:41,096 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-02-18 21:05:41,104 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-02-18 21:05:43,262 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (127.0.0.1:1883 -> tcp://127.0.0.1:1883)
+2017-02-18 21:05:43,730 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in /home/d/mqtt-spy/
+2017-02-18 21:05:43,822 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2017-02-18 21:05:43,822 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2017-02-18 21:05:44,323 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@localhost]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://127.0.0.1:1883]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2017-02-18 21:05:44,365 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@localhost connected
+2017-02-18 21:05:44,835 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2017-02-18 21:05:59,933 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:01,330 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:02,081 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:02,765 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:03,386 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:04,058 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:04,685 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:05,310 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:06,053 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:06,966 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:08,845 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:06:25,214 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:26,181 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:26,446 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:26,685 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:26,922 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:27,629 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:28,030 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:28,070 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:28,477 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:28,781 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:28,853 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:29,169 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:29,864 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:30,101 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:30,357 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:06:30,657 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "/command/missile". Payload size = "3"
+2017-02-18 21:07:03,541 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to command/missile
+2017-02-18 21:07:03,541 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for command/missile
+2017-02-18 21:07:03,638 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Subscribed to command/missile
+2017-02-18 21:07:07,076 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:08,717 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:09,446 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:10,041 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:10,277 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:10,477 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:10,652 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:10,832 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:11,012 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:11,184 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:11,385 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:07:11,905 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:09:39,616 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:09:40,540 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:09:40,908 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:09:41,200 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:09:41,443 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:10:59,770 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:00,411 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:00,682 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:00,922 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:01,142 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:01,875 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:02,071 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:02,270 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:11:02,459 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:05,788 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:06,312 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:06,567 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:06,800 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:06,945 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:07,147 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:07,356 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:08,088 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:08,288 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:08,495 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:08,679 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:08,856 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,056 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,227 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,284 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,396 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,592 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,795 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:09,980 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:10,172 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:10,356 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:10,551 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:10,752 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:11,668 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:11,972 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:12,252 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:12,636 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:12,828 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:13,012 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:13,199 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:28:13,392 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:48,895 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:49,451 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:49,959 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:50,371 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:50,546 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:50,886 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:51,059 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:51,223 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:51,403 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:51,554 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:51,722 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:51,870 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:52,046 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:52,198 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:52,367 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:52,518 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:52,687 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:52,842 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:53,030 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:30:53,218 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:11,419 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:17,070 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:17,734 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:18,114 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:18,542 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:18,722 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:18,906 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:19,110 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:19,322 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:19,514 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:19,710 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:19,902 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:20,110 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:20,318 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:20,502 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:20,690 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:20,858 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:21,030 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:21,202 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:21,378 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:21,550 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:21,718 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:21,898 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:22,070 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:22,247 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:31:22,438 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:17,686 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:32,762 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:33,718 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:36,435 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:36,706 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:37,462 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:37,925 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:38,434 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:38,970 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:39,546 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:40,134 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:40,662 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:41,130 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:41,478 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:41,682 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:41,909 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:42,129 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:42,338 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:42,581 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:42,810 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:43,049 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:43,278 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:43,546 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:43,802 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:44,033 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:44,286 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:44,525 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:44,777 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:45,026 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:45,246 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:45,493 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:45,730 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:45,953 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:46,174 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:46,254 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:46,373 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:46,614 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:46,849 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:47,082 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:47,310 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:47,533 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:47,770 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:47,997 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:48,254 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:48,474 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:48,677 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:48,869 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:49,057 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:49,270 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:49,474 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:49,669 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:49,870 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:50,058 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:50,250 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:50,433 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:50,610 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:50,797 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:50,969 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:51,158 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:51,329 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:51,514 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:51,693 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:51,873 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:52,061 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:52,238 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:52,437 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:52,625 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:52,801 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:52,981 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:53,178 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:53,349 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:53,554 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:53,733 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:53,913 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:54,097 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:54,281 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:54,469 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:54,645 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:54,841 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:55,013 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:55,201 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:55,374 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:55,545 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:55,729 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:55,925 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:56,101 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:56,302 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:56,481 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:56,658 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:56,846 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:57,025 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:57,202 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:57,377 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:57,550 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:57,709 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:57,865 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,025 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,185 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,333 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,485 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,645 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,806 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:58,961 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:59,149 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:59,305 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:59,473 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:59,641 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:59,805 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:32:59,977 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:33:00,146 INFO  [JavaFX Application Thread     ] [MqttAsyncConnection           ]  - Publishing message on topic "command/missile". Payload size = "3"
+2017-02-18 21:33:19,289 INFO  [JavaFX Application Thread     ] [BaseMqttConnection            ]  - Successfully unsubscribed from command/missile
+2017-02-18 21:33:19,290 INFO  [JavaFX Application Thread     ] [MqttConnectionWithReconnection]  - Disconnecting mqtt-spy from [tcp://127.0.0.1:1883]
+2017-02-18 21:33:19,309 INFO  [MQTT Disc: mqtt-spy           ] [MqttDisconnectionResultHandler]  - mqtt-spy@localhost disconnected
+2017-04-16 12:26:14,453 INFO  [JavaFX Application Thread     ] [BaseConfigurationManager      ]  - Creating UI property file
+2017-04-16 12:26:14,959 ERROR [JavaFX Application Thread     ] [BaseConfigurationUtils        ]  - Invalid number format 
+2017-04-16 12:26:15,449 ERROR [JavaFX Application Thread     ] [MqttStatsFileIO               ]  - Cannot read the statistics file from /home/d/mqtt-spy/mqtt-spy-stats.xml
+java.io.FileNotFoundException: Cannot load the file from /home/d/mqtt-spy/mqtt-spy-stats.xml
+	at pl.baczkowicz.spy.xml.XMLParser.loadFromFile(XMLParser.java:359)
+	at pl.baczkowicz.mqttspy.ui.stats.MqttStatsFileIO.loadStats(MqttStatsFileIO.java:57)
+	at pl.baczkowicz.spy.ui.stats.StatisticsManager.loadStats(StatisticsManager.java:298)
+	at pl.baczkowicz.mqttspy.ui.controllers.MqttSpyMainController.init(MqttSpyMainController.java:154)
+	at pl.baczkowicz.mqttspy.ui.MqttViewManager.createMainWindow(MqttViewManager.java:151)
+	at pl.baczkowicz.mqttspy.Main.start(Main.java:90)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$49(GtkApplication.java:139)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-16 12:26:16,190 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = false
+2017-04-16 12:26:50,302 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-04-16 12:26:56,768 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2017-04-16 12:28:07,762 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection mqtt-spy@message-broker
+2017-04-16 12:28:07,767 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (message-broker:1883 -> tcp://message-broker:1883)
+2017-04-16 12:28:07,772 ERROR [Thread-11                     ] [BaseConfigurationUtils        ]  - Invalid number format 
+2017-04-16 12:28:08,210 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in /home/d/mqtt-spy/
+2017-04-16 12:28:08,288 INFO  [JavaFX Application Thread     ] [NewSubscriptionController     ]  - Subscribing to /mqtt-spy/test/
+2017-04-16 12:28:08,289 INFO  [JavaFX Application Thread     ] [MqttSubscriptionViewManager   ]  - Creating subscription for /mqtt-spy/test/
+2017-04-16 12:28:08,790 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@message-broker]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://message-broker:1883]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2017-04-16 12:28:08,894 WARN  [MQTT Con: mqtt-spy            ] [MqttConnectionResultHandler   ]  - Connecting to mqtt-spy@message-broker failed
+MqttException (0) - java.net.UnknownHostException: message-broker
+	at org.eclipse.paho.client.mqttv3.internal.ExceptionHelper.createMqttException(ExceptionHelper.java:38)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:664)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.net.UnknownHostException: message-broker
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:184)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at org.eclipse.paho.client.mqttv3.internal.TCPNetworkModule.start(TCPNetworkModule.java:70)
+	at org.eclipse.paho.client.mqttv3.internal.ClientComms$ConnectBG.run(ClientComms.java:650)
+	... 1 more
+2017-04-16 12:33:12,787 ERROR [JavaFX Application Thread     ] [SpyUncaughtExceptionHandler   ]  - Thread Thread[JavaFX Application Thread,5,main] failed with java.lang.IndexOutOfBoundsException: Index: 2, Size: 1
+java.lang.IndexOutOfBoundsException: Index: 2, Size: 1
+	at java.util.ArrayList.rangeCheckForAdd(ArrayList.java:661)
+	at java.util.ArrayList.add(ArrayList.java:473)
+	at pl.baczkowicz.spy.ui.controls.DragAndDropTreeViewCell$4.handle(DragAndDropTreeViewCell.java:212)
+	at pl.baczkowicz.spy.ui.controls.DragAndDropTreeViewCell$4.handle(DragAndDropTreeViewCell.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$DnDGesture.fireEvent(Scene.java:2933)
+	at javafx.scene.Scene$DnDGesture.processTargetDrop(Scene.java:3159)
+	at javafx.scene.Scene$DnDGesture.access$6400(Scene.java:2909)
+	at javafx.scene.Scene$DropTargetListener.drop(Scene.java:2873)
+	at com.sun.javafx.tk.quantum.GlassSceneDnDEventHandler.lambda$handleDragDrop$309(GlassSceneDnDEventHandler.java:95)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassSceneDnDEventHandler.handleDragDrop(GlassSceneDnDEventHandler.java:92)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleDragDrop$363(GlassViewEventHandler.java:715)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleDragDrop(GlassViewEventHandler.java:714)
+	at com.sun.glass.ui.View.handleDragDrop(View.java:712)
+	at com.sun.glass.ui.View.notifyDragDrop(View.java:1037)
+	at com.sun.glass.ui.gtk.GtkDnDClipboard.pushToSystemImpl(Native Method)
+	at com.sun.glass.ui.gtk.GtkDnDClipboard.pushToSystem(GtkDnDClipboard.java:39)
+	at com.sun.glass.ui.SystemClipboard.flush(SystemClipboard.java:51)
+	at com.sun.glass.ui.ClipboardAssistance.flush(ClipboardAssistance.java:59)
+	at com.sun.javafx.tk.quantum.QuantumClipboard.flush(QuantumClipboard.java:274)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.startDrag(QuantumToolkit.java:1224)
+	at javafx.scene.Scene$DnDGesture.dragDetectedProcessed(Scene.java:2953)
+	at javafx.scene.Scene$DnDGesture.process(Scene.java:3022)
+	at javafx.scene.Scene$DnDGesture.access$8200(Scene.java:2909)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3773)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:381)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$354(GlassViewEventHandler.java:417)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:416)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.gtk.GtkApplication.enterNestedEventLoopImpl(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication._enterNestedEventLoop(GtkApplication.java:211)
+	at com.sun.glass.ui.Application.enterNestedEventLoop(Application.java:511)
+	at com.sun.glass.ui.EventLoop.enter(EventLoop.java:107)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.enterNestedEventLoop(QuantumToolkit.java:583)
+	at javafx.stage.Stage.showAndWait(Stage.java:474)
+	at pl.baczkowicz.spy.ui.BaseViewManager.showEditConnectionsWindow(BaseViewManager.java:326)
+	at pl.baczkowicz.spy.eventbus.KBus.notifyConsumer(KBus.java:146)
+	at pl.baczkowicz.spy.eventbus.KBus.publish(KBus.java:120)
+	at pl.baczkowicz.spy.ui.controlpanel.ConnectionsControlPanelItem$2.handle(ConnectionsControlPanelItem.java:127)
+	at pl.baczkowicz.spy.ui.controlpanel.ConnectionsControlPanelItem$2.handle(ConnectionsControlPanelItem.java:1)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:86)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:49)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Node.fireEvent(Node.java:8413)
+	at javafx.scene.control.Button.fire(Button.java:185)
+	at com.sun.javafx.scene.control.behavior.ButtonBehavior.mouseReleased(ButtonBehavior.java:182)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:96)
+	at com.sun.javafx.scene.control.skin.BehaviorSkinBase$1.handle(BehaviorSkinBase.java:89)
+	at com.sun.javafx.event.CompositeEventHandler$NormalEventHandlerRecord.handleBubblingEvent(CompositeEventHandler.java:218)
+	at com.sun.javafx.event.CompositeEventHandler.dispatchBubblingEvent(CompositeEventHandler.java:80)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:238)
+	at com.sun.javafx.event.EventHandlerManager.dispatchBubblingEvent(EventHandlerManager.java:191)
+	at com.sun.javafx.event.CompositeEventDispatcher.dispatchBubblingEvent(CompositeEventDispatcher.java:59)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:58)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.BasicEventDispatcher.dispatchEvent(BasicEventDispatcher.java:56)
+	at com.sun.javafx.event.EventDispatchChainImpl.dispatchEvent(EventDispatchChainImpl.java:114)
+	at com.sun.javafx.event.EventUtil.fireEventImpl(EventUtil.java:74)
+	at com.sun.javafx.event.EventUtil.fireEvent(EventUtil.java:54)
+	at javafx.event.Event.fireEvent(Event.java:198)
+	at javafx.scene.Scene$MouseHandler.process(Scene.java:3757)
+	at javafx.scene.Scene$MouseHandler.access$1500(Scene.java:3485)
+	at javafx.scene.Scene.impl_processMouseEvent(Scene.java:1762)
+	at javafx.scene.Scene$ScenePeerListener.mouseEvent(Scene.java:2494)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:381)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler$MouseEventNotification.run(GlassViewEventHandler.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.lambda$handleMouseEvent$354(GlassViewEventHandler.java:417)
+	at com.sun.javafx.tk.quantum.QuantumToolkit.runWithoutRenderLock(QuantumToolkit.java:389)
+	at com.sun.javafx.tk.quantum.GlassViewEventHandler.handleMouseEvent(GlassViewEventHandler.java:416)
+	at com.sun.glass.ui.View.handleMouseEvent(View.java:555)
+	at com.sun.glass.ui.View.notifyMouse(View.java:937)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$49(GtkApplication.java:139)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-16 12:33:19,091 INFO  [JavaFX Application Thread     ] [EditConnectionsController     ]  - Selecting first item...
+2017-04-16 12:34:12,618 INFO  [JavaFX Application Thread     ] [EditMqttConnectionController  ]  - Opening connection mqtt-spy@dnuc
+2017-04-16 12:34:12,621 INFO  [JavaFX Application Thread     ] [MqttConfigurationUtils        ]  - Auto-complete for server URI (dnuc -> tcp://dnuc)
+2017-04-16 12:34:12,748 ERROR [JavaFX Application Thread     ] [FileUtils                     ]  - No files in /home/d/mqtt-spy/
+2017-04-16 12:34:13,270 INFO  [mqtt-spy [ConnectionRunnable for mqtt-spy@dnuc]] [MqttAsyncConnectionRunnable   ]  - Connecting client ID [mqtt-spy] to server [[tcp://dnuc]]; options = 
+============== Connection options ==============
+CleanSession                :  true
+SocketFactory               :  null
+MqttVersion                 :  0
+KeepAliveInterval           :  60
+ConTimeout                  :  30
+UserName                    :  null
+SSLProperties               :  null
+WillDestination             :  null
+==========================================
+
+2017-04-16 12:34:13,330 INFO  [MQTT Call: mqtt-spy           ] [MqttConnectionResultHandler   ]  - mqtt-spy@dnuc connected
+2017-04-16 12:34:13,330 INFO  [JavaFX Application Thread     ] [MqttEventHandler              ]  - About to resubscribe to all requested topics
+2017-04-16 12:34:20,039 ERROR [MQTT Rec: mqtt-spy            ] [MqttCallbackHandler           ]  - Connection mqtt-spy@dnuc lost
+Connection lost (32109) - java.io.EOFException
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:146)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readByte(DataInputStream.java:267)
+	at org.eclipse.paho.client.mqttv3.internal.wire.MqttInputStream.readMqttWireMessage(MqttInputStream.java:65)
+	at org.eclipse.paho.client.mqttv3.internal.CommsReceiver.run(CommsReceiver.java:107)
+	... 1 more
+2017-04-16 12:41:02,471 ERROR [JavaFX Application Thread     ] [BaseConfigurationUtils        ]  - Invalid number format 
+2017-04-16 12:41:02,990 ERROR [JavaFX Application Thread     ] [MqttStatsFileIO               ]  - Cannot read the statistics file from /home/d/mqtt-spy/mqtt-spy-stats.xml
+java.io.FileNotFoundException: Cannot load the file from /home/d/mqtt-spy/mqtt-spy-stats.xml
+	at pl.baczkowicz.spy.xml.XMLParser.loadFromFile(XMLParser.java:359)
+	at pl.baczkowicz.mqttspy.ui.stats.MqttStatsFileIO.loadStats(MqttStatsFileIO.java:57)
+	at pl.baczkowicz.spy.ui.stats.StatisticsManager.loadStats(StatisticsManager.java:298)
+	at pl.baczkowicz.mqttspy.ui.controllers.MqttSpyMainController.init(MqttSpyMainController.java:154)
+	at pl.baczkowicz.mqttspy.ui.MqttViewManager.createMainWindow(MqttViewManager.java:151)
+	at pl.baczkowicz.mqttspy.Main.start(Main.java:90)
+	at com.sun.javafx.application.LauncherImpl.lambda$launchApplication1$162(LauncherImpl.java:863)
+	at com.sun.javafx.application.PlatformImpl.lambda$runAndWait$175(PlatformImpl.java:326)
+	at com.sun.javafx.application.PlatformImpl.lambda$null$173(PlatformImpl.java:295)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at com.sun.javafx.application.PlatformImpl.lambda$runLater$174(PlatformImpl.java:294)
+	at com.sun.glass.ui.InvokeLaterDispatcher$Future.run(InvokeLaterDispatcher.java:95)
+	at com.sun.glass.ui.gtk.GtkApplication._runLoop(Native Method)
+	at com.sun.glass.ui.gtk.GtkApplication.lambda$null$49(GtkApplication.java:139)
+	at java.lang.Thread.run(Thread.java:745)
+2017-04-16 12:41:03,696 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-04-16 12:41:03,699 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-04-16 12:41:50,703 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-04-16 12:41:50,706 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-04-16 12:45:46,184 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-04-16 12:45:46,189 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
+2017-04-16 13:59:24,234 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Default configuration file present (/home/d/mqtt-spy/mqtt-spy-configuration.xml) = true
+2017-04-16 13:59:24,239 INFO  [JavaFX Application Thread     ] [MqttViewManager               ]  - Loading configuration file from /home/d/mqtt-spy/mqtt-spy-configuration.xml
