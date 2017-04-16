@@ -1,0 +1,15 @@
+FROM alpine:latest
+MAINTAINER roadster
+
+RUN apk add --update mosquitto mosquitto-clients && \
+mkdir /work && chown nobody /work 
+
+VOLUME ["/work"]
+WORKDIR /work
+
+USER nobody
+
+EXPOSE 1883
+
+CMD ["mosquitto"]
+

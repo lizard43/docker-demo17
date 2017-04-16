@@ -1,0 +1,50 @@
+version: "3"
+
+services:
+
+  message-broker:
+    image: roadster/mqtt-broker:latest
+    ports:
+      - "1883:1883"
+      - "8000:8000"
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - command-net
+
+  c2:
+    image: roadster/missile-command-c2:latest
+    ports:
+      - "8090:8080"
+    depends_on:
+      - message-broker
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+    networks:
+      - command-net
+
+  radar:
+    image: roadster/missile-command-radar:latest
+    depends_on:
+      - c2
+    deploy:
+      placement:
+        constraints: [node.role == worker]
+    networks:
+      - command-net
+
+  battery:
+    image: roadster/missile-command-battery:latest
+    depends_on:
+      - c2
+    deploy:
+      placement:
+        constraints: [node.role == worker]
+    networks:
+      - command-net
+
+networks:  
+  command-net:
+    external: true

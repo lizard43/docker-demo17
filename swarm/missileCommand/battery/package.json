@@ -1,0 +1,14 @@
+{
+  "name": "battery",
+  "version": "1.0.0",
+  "description": "Build: * docker build -f Dockerfile -t roadster/missile-command-battery:latest .",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mqtt": "^2.4.0"
+  }
+}

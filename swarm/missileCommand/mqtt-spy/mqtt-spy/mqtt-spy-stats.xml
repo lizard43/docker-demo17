@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:MqttSpyStats xmlns:ns2="http://baczkowicz.pl/mqtt-spy-stats">
+    <ID>8589584639123211951</ID>
+    <StartDate>2017-04-16T12:41:03.002-04:00</StartDate>
+    <Connections>0</Connections>
+    <Subscriptions>0</Subscriptions>
+    <MessagesPublished>0</MessagesPublished>
+    <MessagesReceived>0</MessagesReceived>
+</ns2:MqttSpyStats>
