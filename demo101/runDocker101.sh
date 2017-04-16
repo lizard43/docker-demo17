@@ -62,7 +62,7 @@ echo
 pause
 
 # Start nginx
-COMMAND='docker run -d --name demo_nginx -p 80:80 nginx'
+COMMAND='docker run -d --name demo_nginx -p 8000:80 nginx'
 clear
 echo
 echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
