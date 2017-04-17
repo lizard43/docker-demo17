@@ -18,7 +18,7 @@ Docker Compose Demo
    https://docs.docker.com/compose/compose-file/
 
 
-*A docker-compose.yml looks like this:
+* A docker-compose.yml looks like this:
 
 	![Compose File](../images/compose.png)
 
