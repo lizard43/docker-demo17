@@ -1,5 +1,7 @@
-Docker Compose Demo 
-====================
+Docker Compose
+===============
+
+**Docker compoose info**
 
 * [https://docs.docker.com/compose](https://docs.docker.com/compose)
 
@@ -17,11 +19,15 @@ Docker Compose Demo
 
    https://docs.docker.com/compose/compose-file/
 
+**Docker compose demo**
 
-* A docker-compose.yml looks like this:
+* The docker-compose.yml looks like this:
 
 	![Compose File](../images/compose.png)
 
+* The architecture of the docker compose looks like this:
+
+	![Architecture File](../images/architecture.png) 
 
 **Compose UI**
 
