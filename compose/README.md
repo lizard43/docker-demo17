@@ -20,7 +20,7 @@ Docker Compose Demo
 
 *A docker-compose.yml looks like this:
 
-	![Compose File](../../images/compose.png)
+	![Compose File](../images/compose.png)
 
 
 **Compose UI**
