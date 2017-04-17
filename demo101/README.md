@@ -7,7 +7,10 @@ Docker 101 Demo
 
 **Basic docker commands:**
 
+- docker pull
+- docker images
 - docker run
+- docker start
 - docker stop
 - docker ps
 - docker rm

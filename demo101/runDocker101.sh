@@ -62,7 +62,7 @@ echo
 pause
 
 # Start nginx
-COMMAND='docker run -d --name demo_nginx -p 8000:80 nginx'
+COMMAND='docker run -d --name demo_nginx -p 8500:80 nginx'
 clear
 echo
 echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
@@ -97,7 +97,7 @@ ${COMMAND}
 echo
 pause
 
-# Show that no containers are running
+# Show that the NGINX container has stopped
 COMMAND='docker ps -a'
 clear
 echo
@@ -106,7 +106,34 @@ ${COMMAND}
 echo
 pause
 
-# Show that no containers are running
+# Start the previous NGINX docker container
+COMMAND='docker start demo_nginx'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# Show that container has started again
+COMMAND='docker ps'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# Stop the NGINX docker container
+COMMAND='docker stop demo_nginx'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# Remove the NGINX container
 COMMAND='docker rm demo_nginx'
 clear
 echo

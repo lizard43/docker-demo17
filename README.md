@@ -22,7 +22,7 @@ Docker 201 - Taking the World By Swarm
    - Vote: 5000
    - Results: 5001
    - MQTT WS: 8000
-   - NGINX: 8000
+   - NGINX: 8500
    - Swarm Viz: 8080
    - C2: 8090
    - Portainer: 9000
