@@ -14,10 +14,13 @@ var BATTERY = BATTERY || (function() {
     var mqttClient  = mqtt.connect('mqtt://message-broker');
     
     var xLocation = randomIntFromInterval(0, 1);
-    if (xLocation === 1) {
+//    console.log("X: ", xLocation);
+    if (xLocation > 0) {
       xLocation = 480;
     }
-    var yLocation = randomIntFromInterval(400, 580);
+//    console.log("X: ", xLocation);
+    var yLocation = randomIntFromInterval(350, 600);
+//    console.log("Y: ", yLocation);
 
     mqttClient.on('connect', function () {
       console.log("Connect to MQTT Broker");
@@ -26,8 +29,8 @@ var BATTERY = BATTERY || (function() {
      
     mqttClient.on('message', function (topic, message) {
 
-      console.log(topic.toString())
-      console.log(message.toString())
+//      console.log(topic.toString())
+//      console.log(message.toString())
 
       var missileMessage = JSON.parse(message);
       
@@ -38,7 +41,9 @@ var BATTERY = BATTERY || (function() {
 //      var xlen = missileMessage.target.x - missileMessage.origin.x;
 //      var ylen = missileMessage.target.y - missileMessage.origin.y;
 
-        var distance = missileMessage.speed * (50 + randomIntFromInterval(0, 5));
+        var offset = randomIntFromInterval(1, 10);
+        console.log("Offset: ", offset);
+        var distance = missileMessage.speed * (50 + offset);
         var xTarget = Math.sin(missileMessage.angle) * distance + missileMessage.origin.x;
         var yTarget = Math.cos(missileMessage.angle) * distance + missileMessage.origin.y;
            
@@ -48,7 +53,7 @@ var BATTERY = BATTERY || (function() {
         };
 
         var origin = {
-            'x': 0,
+            'x': xLocation,
             'y': yLocation
         };
 
