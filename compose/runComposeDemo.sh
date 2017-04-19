@@ -43,6 +43,52 @@ ${COMMAND}
 echo
 pause
 
+# View running containers
+COMMAND='docker ps'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# Scale up web app
+COMMAND='docker-compose scale vote=5'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# View running containers
+COMMAND='docker ps'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# Scale back web app
+COMMAND='docker-compose scale vote=1'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# View running containers
+COMMAND='docker ps'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+
 # Docker compose down
 COMMAND='docker-compose down'
 clear
@@ -51,3 +97,13 @@ echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
 ${COMMAND}
 echo
 pause
+
+# View running containers
+COMMAND='docker ps -a'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+

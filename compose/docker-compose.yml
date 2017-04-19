@@ -1,13 +1,25 @@
 version: "3"
 
 services:
+  loadbalancer:
+    image: dockercloud/haproxy
+    ports:
+      - 5000:80
+    links:
+      - vote
+    networks:
+      - front-tier
+      - back-tier
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+  
   vote:
     build: ./vote
     command: python app.py
     volumes:
-     - ./vote:/app
+      - ./vote:/app
     ports:
-      - "5000:80"
+      - 80
     networks:
       - front-tier
       - back-tier

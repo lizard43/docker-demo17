@@ -36,6 +36,24 @@ docker stop demo_nginx
 docker rm demo_nginx
 clear
 
+# Show docker help
+COMMAND='docker help'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
+# Show docker version
+COMMAND='docker version'
+clear
+echo
+echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
+${COMMAND}
+echo
+pause
+
 # Show fake an nginx pull since not connected online
 COMMAND='docker pull nginx'
 clear
