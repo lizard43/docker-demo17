@@ -232,47 +232,11 @@ echo
 pause
 
 # make it sparkle
-COMMAND='curl http://dnuc:4000/sparkle'
+COMMAND='for n in $(seq 1 5); do curl http://dnuc:4000/sparkles; done'
 clear
 echo
 echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
-${COMMAND}
-echo
-pause
-
-# make it sparkle
-COMMAND='curl http://dnuc:4000/sparkle'
-clear
-echo
-echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
-${COMMAND}
-echo
-pause
-
-# make it sparkle
-COMMAND='curl http://dnuc:4000/sparkle'
-clear
-echo
-echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
-${COMMAND}
-echo
-pause
-
-# make it sparkle
-COMMAND='curl http://dnuc:4000/sparkle'
-clear
-echo
-echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
-${COMMAND}
-echo
-pause
-
-# make it sparkle
-COMMAND='curl http://dnuc:4000/sparkle'
-clear
-echo
-echo -e $ ${HL}${COMMAND}${NC} | randtype -m 0 -t 10,20000
-${COMMAND}
+for n in $(seq 1 5); do curl http://dnuc:4000/sparkles; echo; done
 echo
 pause
 
