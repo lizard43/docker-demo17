@@ -16,14 +16,9 @@ Docker 101 Demo
 - docker rm
 - docker rmi
 
-**Docker UI:**
+**Docker UI's:**
 
 * Many choices
-
-   * Docker UI
-      * [https://github.com/kevana/ui-for-docker](https://github.com/kevana/ui-for-docker)
-      * ./runDockerUI.sh to start UI on port 80
-      * Point browser to http://localhost
 
    * Portainer
       * [https://hub.docker.com/r/portainer/portainer](https://hub.docker.com/r/portainer/portainer)
