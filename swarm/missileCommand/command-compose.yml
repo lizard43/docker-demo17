@@ -10,8 +10,6 @@ services:
     deploy:
       placement:
         constraints: [node.role == manager]
-    networks:
-      - command-net
 
   c2:
     image: roadster/missile-command-c2:latest
@@ -22,8 +20,6 @@ services:
     deploy:
       placement:
         constraints: [node.role == manager]
-    networks:
-      - command-net
 
   radar:
     image: roadster/missile-command-radar:latest
@@ -32,8 +28,6 @@ services:
     deploy:
       placement:
         constraints: [node.role == worker]
-    networks:
-      - command-net
 
   battery:
     image: roadster/missile-command-battery:latest
@@ -43,9 +37,4 @@ services:
       replicas: 2
       placement:
         constraints: [node.role == worker]
-    networks:
-      - command-net
 
-networks:  
-  command-net:
-    external: true

@@ -103,9 +103,9 @@ var MC = MC || (function() {
         }
 
         function onRocket(message) {
-            console.log("Recvd Rocket");
+            console.log("Recvd Rocket: ", message);
             var rocketMessage = JSON.parse(message);
-            var rocket = new Rocket(rocketMessage.target,  rocketMessage.origin);
+            var rocket = new Rocket(rocketMessage.target,  rocketMessage.origin, rocketMessage.color);
             _entities.rockets.push(rocket);
         }
 
@@ -450,7 +450,7 @@ var MC = MC || (function() {
         }
     };
     
-    var Rocket = function Rocket(target, origin) {
+    var Rocket = function Rocket(target, origin, color) {
         this.fullRadius = 30;
         this.currentRadius = 0;
         this.expanding = true;
@@ -460,6 +460,8 @@ var MC = MC || (function() {
         this.distance = 0;
         
         this.target = target;
+        
+        this.color = color;
         
         // @TODO: Weird turret reference issue causing red turrets to move
         this.origin = origin;
@@ -508,7 +510,8 @@ var MC = MC || (function() {
             ctx.closePath();
             ctx.fill();
         } else {
-            ctx.strokeStyle = 'rgb(0, 255, 0)';
+//            ctx.strokeStyle = 'rgb(0, 255, 0)';
+            ctx.strokeStyle = this.color;;
             ctx.beginPath();
             ctx.moveTo(this.origin.x, this.origin.y);
             ctx.lineTo(

@@ -11,16 +11,19 @@ var BATTERY = BATTERY || (function() {
 
     var mqtt = require('mqtt');
 
-    var mqttClient  = mqtt.connect('mqtt://message-broker');
+    var mqttClient  = mqtt.connect('mqtt://192.168.0.100');
     
-    var xLocation = randomIntFromInterval(0, 1);
-//    console.log("X: ", xLocation);
+    var color = 'rgb('+getRandomInt(0, 255)+','+getRandomInt(0, 255)+',' +getRandomInt(0, 255)+')';
+    console.log('color: ', color);
+    
+    var xLocation = Math.round(Math.random());
+    console.log("X: ", xLocation);
     if (xLocation > 0) {
       xLocation = 480;
     }
-//    console.log("X: ", xLocation);
-    var yLocation = randomIntFromInterval(350, 600);
-//    console.log("Y: ", yLocation);
+    console.log("X: ", xLocation);
+    var yLocation = getRandomInt(350, 600);
+    console.log("Y: ", yLocation);
 
     mqttClient.on('connect', function () {
       console.log("Connect to MQTT Broker");
@@ -29,8 +32,8 @@ var BATTERY = BATTERY || (function() {
      
     mqttClient.on('message', function (topic, message) {
 
-//      console.log(topic.toString())
-//      console.log(message.toString())
+      console.log(topic.toString())
+      console.log(message.toString())
 
       var missileMessage = JSON.parse(message);
       
@@ -41,7 +44,7 @@ var BATTERY = BATTERY || (function() {
 //      var xlen = missileMessage.target.x - missileMessage.origin.x;
 //      var ylen = missileMessage.target.y - missileMessage.origin.y;
 
-        var offset = randomIntFromInterval(1, 10);
+        var offset = getRandomInt(1, 10);
         console.log("Offset: ", offset);
         var distance = missileMessage.speed * (50 + offset);
         var xTarget = Math.sin(missileMessage.angle) * distance + missileMessage.origin.x;
@@ -57,13 +60,12 @@ var BATTERY = BATTERY || (function() {
             'y': yLocation
         };
 
-      var rocket = new Rocket(target, origin)
+      var rocket = new Rocket(target, origin, color)
       mqttClient.publish("command/rocket", JSON.stringify(rocket),  0, false);
     })    
 
-   function randomIntFromInterval(min,max)
-   {
-       return Math.floor(Math.random()*(max-min+1)+min);
+   function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
    }
 
     var engine = (function() {
@@ -188,7 +190,7 @@ var BATTERY = BATTERY || (function() {
         }
     };
     
-    var Rocket = function Rocket(target, origin) {
+    var Rocket = function Rocket(target, origin, color) {
         this.fullRadius = 30;
         this.currentRadius = 0;
         this.expanding = true;
@@ -198,6 +200,8 @@ var BATTERY = BATTERY || (function() {
         this.distance = 0;
         
         this.target = target;
+        
+        this.color = color;
         
         // @TODO: Weird turret reference issue causing red turrets to move
         this.origin = origin;

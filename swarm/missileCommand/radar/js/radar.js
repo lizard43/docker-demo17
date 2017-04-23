@@ -11,22 +11,23 @@ var RADAR = RADAR || (function() {
 
     var mqtt = require('mqtt');
 
-    var mqttClient  = mqtt.connect('mqtt://message-broker');
+//    var mqttClient  = mqtt.connect('mqtt://192.168.0.100');
+    var mqttClient  = mqtt.connect('mqtt://dnuc');
 
     mqttClient.on('connect', function () {
-      console.log("Connect to MQTT Broker");
+      console.log("Connected to MQTT Broker");
       mqttClient.subscribe('command/rocket');
     })
      
     mqttClient.on('message', function (topic, message) {
       // message is Buffer 
-      console.log(message.toString())
+      //console.log(message.toString())
    //   mqttClient.end()
     })    
 
     var engine = (function() {
         // Private variables protected by closure
-        var FPS = 1000 / 30,
+        var FPS = 300,
             _level = 0,
             _new_missile = 10000,
             _missiles_created = 0,
@@ -69,17 +70,64 @@ var RADAR = RADAR || (function() {
             return Math.floor(Math.random() * (max - min)) + min;
         }
         
+        function getShootemup(_level) {
+        
+         var count = 1;
+         
+         if (_level < 2) {
+            count = 1;
+         }
+         else if (_level < 5) {
+            count = 2;
+         }
+         else if (_level < 6) {
+            count = 3;
+         }
+         else if (_level < 8) {
+            count = 4;
+         }
+         else {
+            count = 1;
+            _level = 1;
+         }
+         
+         return count;
+        }
+        
         /**
          * Game loop
          */
         function _gameLoop() {
+        
+        console.log('_missiles_created', _missiles_created);
+        console.log('MissilesToDetroy', Wave.getWave(_level).MissilesToDetroy);
 
             // Wave end?
-            if (_missiles_created === Wave.getWave(_level).MissilesToDetroy) {
+            if (_missiles_created >= Wave.getWave(_level).MissilesToDetroy) {
                 _level += 1;
+                console.log('LEVEL: ', _level);
                 startWave();
             }
-        
+            
+            // how many missiles do we shoot this loop?
+            
+            var count = getShootemup(_level);
+            
+            console.log('count', count);
+            
+            for (var i = 0; i < count; i++) {
+            
+                var missile = new Missile(false, false, Wave.getWave(_level).MissileSpeed);
+                _entities.missiles.push(missile);
+                _missiles_created += 1;
+                _new_missile += Wave.getWave(_level).TimeBetweenShots;
+
+                console.log("Detected Missile");
+                mqttClient.publish("command/missile", JSON.stringify(missile),  0, false);
+            
+            }
+            
+        /*
             // Add missiles
             if (_new_missile < 0 &&
                 _missiles_created < Wave.getWave(_level).MissilesToDetroy
@@ -93,6 +141,7 @@ var RADAR = RADAR || (function() {
                 console.log("Detected Missile");
                 mqttClient.publish("command/missile", JSON.stringify(missile),  0, false);
             }
+            */
             
             _new_missile -= FPS;
         
@@ -136,7 +185,7 @@ var RADAR = RADAR || (function() {
     
     
     var Wave = (function() {
-        var TOTAL_WAVE_NUM = 40,
+        var TOTAL_WAVE_NUM = 400,
             _waves = [];
         
         /**
@@ -145,11 +194,11 @@ var RADAR = RADAR || (function() {
         function init() {
             for (var i = 0; i < TOTAL_WAVE_NUM; i++) {
                 _waves[i] = {
-                    'MissilesToDetroy': 10 + i,
+                    'MissilesToDetroy': 5 + i,
                     'MirvChance': 30 + i * 4,
                     'BombChance': i * 2,
                     'FlyerChance': 5,
-                    'TimeBetweenShots': 3000 - i * 200,
+                    'TimeBetweenShots': 500 - i * 200,
                     'MissileSpeed': 1.9 + (i / 4)
                 };
             }
@@ -264,10 +313,10 @@ var RADAR = RADAR || (function() {
     var levels = [];
     levels[0] = {
         'homes': [
-            { 'x': 55, 'y': 520 },
-            { 'x': 105, 'y': 535 },
             { 'x': 158, 'y': 525 },
+            { 'x': 105, 'y': 535 },
             { 'x': 270, 'y': 530 },
+            { 'x': 105, 'y': 535 },
             { 'x': 325, 'y': 525 },
             { 'x': 390, 'y': 520 }
         ],

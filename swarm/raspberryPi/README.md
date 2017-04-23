@@ -2,7 +2,7 @@
 
 * We'll use several Raspberry Pi's as part of the swarm demo.
 
-* The Hypriot Docker Image for Raspberry Pi is one of the better option to get going on a Pi with the latest Docker version.
+* The Hypriot Docker Image for Raspberry Pi is one of the better options to get going on a Pi with the latest Docker version.
 
     https://blog.hypriot.com/downloads/
 

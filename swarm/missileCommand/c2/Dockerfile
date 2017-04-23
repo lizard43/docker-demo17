@@ -6,7 +6,7 @@ RUN npm install -g http-server
 WORKDIR /command
 
 ADD index.html /command/.
-ADD node_modules /command/node_modules
+#ADD node_modules /command/node_modules
 
 ADD js /command/js/.
 
